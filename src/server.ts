@@ -4,6 +4,7 @@ import { routes } from "./api/routes";
 const app = express();
 
 app.use(express.json());
+app.disable("x-powered-by");
 app.use("/", routes);
 
 app.listen(3333, () => console.log("Server is running."));
